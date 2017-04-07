@@ -3,6 +3,12 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="facebook_app_id">159333671256419</string>
 
     <string name="action_settings">Settings</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="or">OR</string>
+    <string name="sign_in">Sign in/Sign Up</string>
+    <string name="sign_out">Sign Out</string>
 </resources>
