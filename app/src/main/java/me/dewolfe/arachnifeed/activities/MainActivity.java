@@ -10,6 +10,8 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,8 +22,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import me.dewolfe.arachnifeed.R;
+import me.dewolfe.arachnifeed.adapters.MainRecyclerAdapter;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    private RecyclerView mRecyclerView;
+    private RecyclerView.LayoutManager mLayoutManager;
 
     private FirebaseAuth.AuthStateListener mAuthStateListener;
     @Override
@@ -65,6 +70,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         };
         FirebaseAuth.getInstance().addAuthStateListener(mAuthStateListener);
+
+        mRecyclerView = (RecyclerView) findViewById(R.id.main_recycler_view);
+        mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+        MainRecyclerAdapter adapter = new MainRecyclerAdapter();
+        mRecyclerView.setAdapter(adapter);
     }
 
     @Override

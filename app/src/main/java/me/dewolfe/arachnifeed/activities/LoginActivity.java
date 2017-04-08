@@ -38,6 +38,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //TODO: Implement correct Google and FaceBook sign in
+
         mNameTextView = (TextView) findViewById(R.id.app_name);
         mNameTextView.setText(Html.fromHtml(APP_NAME_FORMATTED), TextView.BufferType.SPANNABLE);
 

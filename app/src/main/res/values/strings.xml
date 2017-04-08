@@ -11,4 +11,9 @@
     <string name="or">OR</string>
     <string name="sign_in">Sign in/Sign Up</string>
     <string name="sign_out">Sign Out</string>
+    <string name="feed_every">Feed every:</string>
+
+    <string name="friendly_name_placeholder" translatable="false">Friendly Name</string>
+    <string name="scientific_name_placeholder" translatable="false">Scientific Name</string>
+    <string name="feed_frequency" translatable="false">x days</string>
 </resources>
